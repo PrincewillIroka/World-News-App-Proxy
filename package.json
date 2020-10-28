@@ -9,9 +9,8 @@
     "@hapi/hapi": "^20.0.1",
     "@hapi/inert": "^6.0.3",
     "dotenv": "^8.2.0",
-    "node-fetch": "^2.6.1"
-  },
-  "devDependencies": {
+    "node-fetch": "^2.6.1",
     "nodemon": "^2.0.6"
-  }
+  },
+  "devDependencies": {}
 }
