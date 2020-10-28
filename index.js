@@ -8,7 +8,6 @@ const environment = process.env.NODE_ENV;
 
 const server = Hapi.server({
   port: port,
-  host: host,
   routes: {
     cors: {
       origin: ["*"],
