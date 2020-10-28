@@ -20,5 +20,19 @@ const getNews = {
   },
 };
 
-const routes = [{ method: "POST", path: "/getNews", config: getNews }];
+const getHome = {
+  handler: async (request, h) => {
+    try {
+      return 'Welcome to WorldNewsAppProxy';
+    } catch (error) {
+      console.error("Get home:", error);
+      return h.response(errorData("Oops something went wrong!")).code(500);
+    }
+  },
+};
+
+const routes = [
+  { method: "POST", path: "/getNews", config: getNews },
+  { method: "GET", path: "/", config: getHome },
+];
 module.exports = routes;
