@@ -3,9 +3,7 @@ const fetch = require("node-fetch");
 const getNews = {
   handler: async (request, h) => {
     try {
-      //   let { url } = request.payload;
-      let url =
-        "https://newsapi.org/v2/top-headlines?sources=abc-news&apiKey=277e502592bd4fbba0b5152081152b53";
+      let { url } = request.payload;
 
       const result = await fetch(url, {
         method: "GET",
@@ -23,7 +21,7 @@ const getNews = {
 const getHome = {
   handler: async (request, h) => {
     try {
-      return 'Welcome to WorldNewsAppProxy';
+      return "Welcome to WorldNewsAppProxy";
     } catch (error) {
       console.error("Get home:", error);
       return h.response(errorData("Oops something went wrong!")).code(500);

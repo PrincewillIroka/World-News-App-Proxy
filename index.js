@@ -10,14 +10,7 @@ const server = Hapi.server({
   port: port,
   host: environment === "development" ? host : null,
   routes: {
-    cors: {
-      origin: ["*"],
-      headers: ["Authorization"],
-      exposedHeaders: ["Accept"],
-      additionalExposedHeaders: ["Accept"],
-      maxAge: 60,
-      credentials: true,
-    },
+    cors: true,
   },
 });
 
