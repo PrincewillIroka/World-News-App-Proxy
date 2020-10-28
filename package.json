@@ -1,0 +1,14 @@
+{
+  "name": "WorldNewsAppProxy",
+  "version": "1.0.0",
+  "description": "Proxy requests for WorldNewsApp",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^20.0.1",
+    "@hapi/inert": "^6.0.3",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.1"
+  }
+}
